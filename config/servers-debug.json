@@ -1,0 +1,35 @@
+{
+    "development":{
+        "http": [
+            {"id": "http-server", "host": "127.0.0.1", "port": 35001, "wsdebug": false, "args": "--inspect=35101" }
+        ],
+        "connector": [
+            {"id": "connector-server-1", "host": "127.0.0.1", "port": 31001, "clientHost": "127.0.0.1", "clientPort": 31101, "frontend": true, "wsdebug": false, "args": "--inspect=31201"}
+        ],
+        "user": [
+            {"id": "user-server", "host": "127.0.0.1", "port": 32001, "needed": true, "wsdebug": false, "args": "--inspect=32101"}
+        ],
+        "room": [
+            {"id": "room-server-1", "host": "127.0.0.1", "port": 34001, "game": "nn", "wsdebug": false, "args": "--inspect=34101" },
+            {"id": "room-server-2", "host": "127.0.0.1", "port": 34002, "game": "dz", "wsdebug": false, "args": "--inspect=34102" },
+            {"id": "room-server-3", "host": "127.0.0.1", "port": 34003, "game": "bjl", "wsdebug": false, "args": "--inspect=34103" },
+            {"id": "room-server-4", "host": "127.0.0.1", "port": 34004, "game": "bcbm", "wsdebug": false, "args": "--inspect=34104" },
+            {"id": "room-server-5", "host": "127.0.0.1", "port": 34005, "game": "zjh", "wsdebug": false, "args": "--inspect=34105" },
+            {"id": "room-server-6", "host": "127.0.0.1", "port": 34006, "game": "lx9", "wsdebug": false, "args": "--inspect=34106" },
+            {"id": "room-server-7", "host": "127.0.0.1", "port": 34007, "game": "brnn", "wsdebug": false, "args": "--inspect=34107" },
+            {"id": "room-server-8", "host": "127.0.0.1", "port": 34008, "game": "yybf", "wsdebug": false, "args": "--inspect=34108" },
+            {"id": "room-server-9", "host": "127.0.0.1", "port": 34009, "game": "ddz", "wsdebug": false, "args": "--inspect=34109" },
+            {"id": "room-server-10", "host": "127.0.0.1", "port": 34010, "game": "lkpy", "wsdebug": false, "args": "--inspect=34110" },
+            {"id": "room-server-11", "host": "127.0.0.1", "port": 34011, "game": "fqzs", "wsdebug": false, "args": "--inspect=34111" },
+            {"id": "room-server-12", "host": "127.0.0.1", "port": 34012, "game": "ermj", "wsdebug": false, "args": "--inspect=34112" },
+            {"id": "room-server-13", "host": "127.0.0.1", "port": 34013, "game": "pj", "wsdebug": false, "args": "--inspect=34113" },
+            {"id": "room-server-14", "host": "127.0.0.1", "port": 34014, "game": "sss", "wsdebug": false, "args": "--inspect=34114" }
+        ],
+        "zone": [
+            {"id": "zone-server-1", "host": "127.0.0.1", "port": 33001, "needed": true, "game": "nn,dz,bjl,bcbm,zjh,lx9,brnn,yybf,ddz,lkpy,fqzs,ermj,pj,sss", "wsdebug": false, "args": "--inspect=33101"}
+        ],
+        "robot": [
+            {"id": "robot-server-1", "host": "127.0.0.1", "port": 36001, "needed": true, "wsdebug": false, "args": "--inspect=36101"}
+        ]
+    }
+}

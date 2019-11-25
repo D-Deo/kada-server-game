@@ -1,0 +1,427 @@
+{
+    "Item_1": {
+        "zh-CN": "金币",
+        "zh-TW": "金幣",
+        "zh-YTNN": "金币"
+    },
+    "Item_2": {
+        "zh-CN": "钻石",
+        "zh-TW": "房卡",
+        "zh-YTNN": "房卡"
+    },
+    "Item_3": {
+        "zh-CN": "钻石",
+        "zh-TW": "房卡",
+        "zh-YTNN": "房卡"
+    },
+    "ResultCode_SessionError": {
+        "zh-CN": "会话失效，请重新登陆",
+        "zh-TW": "會話失效，請重新登陸",
+        "zh-YTNN": "会话失效，请重新登陆"
+    },
+    "ResultCode_ServerBooting": {
+        "zh-CN": "服务器启动中, 请稍后再试",
+        "zh-TW": "服務器啓動中，請稍後再試",
+        "zh-YTNN": "服务器启动中, 请稍后再试"
+    },
+    "ResultCode_ServerBusy": {
+        "zh-CN": "服务器繁忙, 请稍后再试",
+        "zh-TW": "服務器繁忙，請稍后再試",
+        "zh-YTNN": "服务器繁忙, 请稍后再试"
+    },
+    "ResultCode_ServerClosing": {
+        "zh-CN": "服务器关服重启中, 请耐心等待",
+        "zh-TW": "服務器關服重啓中，請耐心等待",
+        "zh-YTNN": "服务器关服重启中, 请耐心等待"
+    },
+    "ResultCode_UserError": {
+        "zh-CN": "玩家错误",
+        "zh-TW": "玩家錯誤",
+        "zh-YTNN": "玩家错误"
+    },
+    "ResultCode_UserPlaying": {
+        "zh-CN": "玩家正在游戏中",
+        "zh-TW": "玩家正在游戲中",
+        "zh-YTNN": "玩家正在游戏中"
+    },
+    "ResultCode_UserNotPlaying": {
+        "zh-CN": "玩家未加入游戏",
+        "zh-TW": "玩家未加入游戲",
+        "zh-YTNN": "玩家未加入游戏"
+    },
+    "ResultCode_UserRebindPhone": {
+        "zh-CN": "玩家不能重复绑定手机号码",
+        "zh-YTNN": "玩家不能重复绑定手机号码",
+        "zh-TW": "玩家不能重複綁定手機號碼"
+    },
+    "ResultCode_UserNotEnoughDiamond": {
+        "zh-CN": "钻石不足",
+        "zh-YTNN": "钻石不足",
+        "zh-TW": "房卡不足"
+    },
+    "ResultCode_UserRoomFull": {
+        "zh-CN": "已达开房上限",
+        "zh-YTNN": "已达开房上限",
+        "zh-TW": "已達開房上限"
+    },
+    "ResultCode_UserOwnerLeave": {
+        "zh-CN": "房主不能退出房间",
+        "zh-YTNN": "房主不能退出房间",
+        "zh-TW": "房主不能退出房間"
+    },
+    "ResultCode_UserGuildFull": {
+        "zh-CN": "已达公会创建上限",
+        "zh-YTNN": "已达公会创建上限",
+        "zh-TW": "已達工會創建上限"
+    },
+    "ResultCode_UserNotEnoughGold": {
+        "zh-CN": "金币不足",
+        "zh-YTNN": "金币不足",
+        "zh-TW": "金幣不足"
+    },
+    "ResultCode_UserNotInGuild": {
+        "zh-CN": "非公会会员",
+        "zh-YTNN": "非公会会员",
+        "zh-TW": "非工會會員"
+    },
+    "ResultCode_UserUnkown": {
+        "zh-CN": "未知用户",
+        "zh-YTNN": "未知用户",
+        "zh-TW": "未知用戶"
+    },
+    "ResultCode_UserChargePlaying": {
+        "zh-CN": "不能对游戏中的玩家扣除房卡",
+        "zh-YTNN": "不能对游戏中的玩家扣除房卡",
+        "zh-TW": "不能對游戲中的玩家扣除房卡"
+    },
+    "ResultCode_UserBindedPhone": {
+        "zh-CN": "手机号码已绑定其他玩家",
+        "zh-YTNN": "手机号码已绑定其他玩家",
+        "zh-TW": "手機號碼已綁定其他玩家"
+    },
+    "ResultCode_UserSuspended": {
+        "zh-CN": "玩家已冻结",
+        "zh-YTNN": "玩家已冻结",
+        "zh-TW": "玩家已凍結"
+    },
+    "ResultCode_UserResuspend": {
+        "zh-CN": "玩家已冻结",
+        "zh-YTNN": "玩家已冻结",
+        "zh-TW": "玩家已凍結"
+    },
+    "ResultCode_UserReunsuspend": {
+        "zh-CN": "玩家已解除冻结",
+        "zh-YTNN": "玩家已解除冻结",
+        "zh-TW": "玩家已解除凍結"
+    },
+    "ResultCode_UserAccountUsed": {
+        "zh-CN": "账号已被注册",
+        "zh-YTNN": "账号已被注册",
+        "zh-TW": "賬號已被注冊"
+    },
+    "ResultCode_UserSameIpOver": {
+        "zh-CN": "相同IP下注册用户过多",
+        "zh-YTNN": "相同IP下注册用户过多",
+        "zh-TW": "相同IP下注册用户过多"
+    },
+    "ResultCode_UserSameDeviceOver": {
+        "zh-CN": "相同设备下注册用户过多",
+        "zh-YTNN": "相同设备下注册用户过多",
+        "zh-TW": "相同设备下注册用户过多"
+    },
+    "ResultCode_UserCodeError": {
+        "zh-CN": "验证码错误",
+        "zh-YTNN": "验证码错误",
+        "zh-TW": "驗證碼錯誤"
+    },
+    "ResultCode_UserPasswordError": {
+        "zh-CN": "密码错误",
+        "zh-YTNN": "密码错误",
+        "zh-TW": "密碼錯誤"
+    },
+    "ResultCode_UserNotEnoughItem": {
+        "zh-CN": "物品不足",
+        "zh-YTNN": "物品不足",
+        "zh-TW": "物品不足"
+    },
+    "ResultCode_UserRecommenderUnknown": {
+        "zh-CN": "未知推荐人",
+        "zh-YTNN": "未知推薦人",
+        "zh-TW": "未知推荐人"
+    },
+    "ResultCode_UserRecommenderAncestor": {
+        "zh-CN": "循环绑定推荐人",
+        "zh-YTNN": "循环绑定推荐人",
+        "zh-TW": "循环绑定推荐人"
+    },
+    "ResultCode_UserBeBanker": {
+        "zh-CN": "当前已经是庄家",
+        "zh-YTNN": "当前已经是庄家",
+        "zh-TW": "當前已經是莊家"
+    },
+    "ResultCode_UserUpBanker": {
+        "zh-CN": "已在上庄列表中",
+        "zh-YTNN": "已在上庄列表中",
+        "zh-TW": "已在上莊清單中"
+    },
+    "ResultCode_RoomError": {
+        "zh-CN": "房间错误",
+        "zh-YTNN": "房间错误",
+        "zh-TW": "房間錯誤"
+    },
+    "ResultCode_RoomUnknown": {
+        "zh-CN": "房间不存在",
+        "zh-YTNN": "房间不存在",
+        "zh-TW": "房間不存在"
+    },
+    "ResultCode_RoomPlaying": {
+        "zh-CN": "房间游戏进行中",
+        "zh-YTNN": "房间游戏进行中",
+        "zh-TW": "房間游戲進行中"
+    },
+    "ResultCode_RoomFull": {
+        "zh-CN": "房间已满",
+        "zh-YTNN": "房间已满",
+        "zh-TW": "房間已滿"
+    },
+    "ResultCode_RoomTurnError": {
+        "zh-CN": "游戏回合错误",
+        "zh-YTNN": "游戏回合错误",
+        "zh-TW": "游戲回合錯誤"
+    },
+    "ResultCode_RoomTurnExpired": {
+        "zh-CN": "回合超时",
+        "zh-YTNN": "回合超时",
+        "zh-TW": "回合超時"
+    },
+    "ResultCode_MailError": {
+        "zh-CN": "邮件错误",
+        "zh-YTNN": "邮件错误",
+        "zh-TW": "郵件錯誤"
+    },
+    "ResultCode_GuildError": {
+        "zh-CN": "公会错误",
+        "zh-YTNN": "公会错误",
+        "zh-TW": "工會錯誤"
+    },
+    "ResultCode_GuildNameUsed": {
+        "zh-CN": "公会名重复",
+        "zh-YTNN": "公会名重复",
+        "zh-TW": "工會名重複"
+    },
+    "ResultCode_GuildUnkown": {
+        "zh-CN": "公会不存在",
+        "zh-YTNN": "公会不存在",
+        "zh-TW": "工會不存在"
+    },
+    "ResultCode_GuildFull": {
+        "zh-CN": "公会已满",
+        "zh-YTNN": "公会已满",
+        "zh-TW": "工會已滿"
+    },
+    "ResultCode_GuildChairmanQuit": {
+        "zh-CN": "会长不能退出公会",
+        "zh-YTNN": "会长不能退出公会",
+        "zh-TW": "會長不能推出工會"
+    },
+    "ResultCode_GuildMemberCreateRoom": {
+        "zh-CN": "公会房间只能由会长代开",
+        "zh-YTNN": "公会房间只能由会长代开",
+        "zh-TW": "工會房間衹能由會長代開"
+    },
+    "ResultCode_GuildRoomFull": {
+        "zh-CN": "已达开房上限",
+        "zh-YTNN": "已达开房上限",
+        "zh-TW": "已達開房上限"
+    },
+    "ResultCode_ItemError": {
+        "zh-CN": "物品错误",
+        "zh-YTNN": "物品错误",
+        "zh-TW": "物品錯誤"
+    },
+    "ResultCode_ItemNotEnough": {
+        "zh-CN": "不足",
+        "zh-YTNN": "不足",
+        "zh-TW": "不足"
+    },
+    "ResultCode_ItemTooMuch": {
+        "zh-CN": "超出上限",
+        "zh-YTNN": "超出上限",
+        "zh-TW": "超出上限"
+    },
+    "ResultCode_UserWithdarwUnknown": {
+        "zh-CN": "无效提现订单",
+        "zh-YTNN": "无效提现订单",
+        "zh-TW": "无效提现订单"
+    },
+    "ResultCode_UserWithdrawPushed": {
+        "zh-CN": "提现订单已处理",
+        "zh-YTNN": "提现订单已处理",
+        "zh-TW": "提现订单已处理"
+    },
+    "ResultCode_UserNotEnoughBankGold": {
+        "zh-CN": "银行金币不足",
+        "zh-YTNN": "银行金币不足",
+        "zh-TW": "银行金币不足"
+    },
+    "NN_Broadcast_BankerTakeAll": {
+        "zh-CN": "大杀八方！<<nick>>在【抢庄牛牛】中通吃全场！",
+        "zh-YTNN": "大杀八方！<<nick>>在【抢庄牛牛】中通吃全场！",
+        "zh-TW": "大杀八方！<<nick>>在【抢庄牛牛】中通吃全场！"
+    },
+    "NN_Broadcast_Formation": {
+        "zh-CN": "运气爆棚！<<nick>>打出了一副<formation>！",
+        "zh-YTNN": "运气爆棚！<<nick>>打出了一副<formation>！",
+        "zh-TW": "运气爆棚！<<nick>>打出了一副<formation>！"
+    },
+    "NN_Broadcast_Times": {
+        "zh-CN": "实力爆发！<<nick>>斩下<times>倍高分！",
+        "zh-YTNN": "实力爆发！<<nick>>斩下<times>倍高分！",
+        "zh-TW": "实力爆发！<<nick>>斩下<times>倍高分！"
+    },
+    "NN_Formation_0": {
+        "zh-CN": "没牛",
+        "zh-YTNN": "没牛",
+        "zh-TW": "没牛"
+    },
+    "NN_Formation_1": {
+        "zh-CN": "有牛",
+        "zh-YTNN": "有牛",
+        "zh-TW": "有牛"
+    },
+    "NN_Formation_2": {
+        "zh-CN": "牛牛",
+        "zh-YTNN": "牛牛",
+        "zh-TW": "牛牛"
+    },
+    "NN_Formation_3": {
+        "zh-CN": "顺子",
+        "zh-YTNN": "顺子",
+        "zh-TW": "顺子"
+    },
+    "NN_Formation_4": {
+        "zh-CN": "同花",
+        "zh-YTNN": "同花",
+        "zh-TW": "同花"
+    },
+    "NN_Formation_5": {
+        "zh-CN": "葫芦",
+        "zh-YTNN": "葫芦",
+        "zh-TW": "葫芦"
+    },
+    "NN_Formation_6": {
+        "zh-CN": "五小牛",
+        "zh-YTNN": "五小牛",
+        "zh-TW": "五小牛"
+    },
+    "NN_Formation_7": {
+        "zh-CN": "五花牛",
+        "zh-YTNN": "五花牛",
+        "zh-TW": "五花牛"
+    },
+    "NN_Formation_8": {
+        "zh-CN": "炸弹",
+        "zh-YTNN": "炸弹",
+        "zh-TW": "炸弹"
+    },
+    "NN_Formation_9": {
+        "zh-CN": "同花顺",
+        "zh-YTNN": "同花顺",
+        "zh-TW": "同花顺"
+    },
+    "BRNN_Formation_0": {
+        "zh-CN": "没牛",
+        "zh-YTNN": "没牛",
+        "zh-TW": "没牛"
+    },
+    "BRNN_Formation_1": {
+        "zh-CN": "牛一",
+        "zh-YTNN": "牛一",
+        "zh-TW": "牛一"
+    },
+    "BRNN_Formation_2": {
+        "zh-CN": "牛二",
+        "zh-YTNN": "牛二",
+        "zh-TW": "牛二"
+    },
+    "BRNN_Formation_3": {
+        "zh-CN": "牛三",
+        "zh-YTNN": "牛三",
+        "zh-TW": "牛三"
+    },
+    "BRNN_Formation_4": {
+        "zh-CN": "牛四",
+        "zh-YTNN": "牛四",
+        "zh-TW": "牛四"
+    },
+    "BRNN_Formation_5": {
+        "zh-CN": "牛五",
+        "zh-YTNN": "牛五",
+        "zh-TW": "牛五"
+    },
+    "BRNN_Formation_6": {
+        "zh-CN": "牛六",
+        "zh-YTNN": "牛六",
+        "zh-TW": "牛六"
+    },
+    "BRNN_Formation_7": {
+        "zh-CN": "牛七",
+        "zh-YTNN": "牛七",
+        "zh-TW": "牛七"
+    },
+    "BRNN_Formation_8": {
+        "zh-CN": "牛八",
+        "zh-YTNN": "牛八",
+        "zh-TW": "牛八"
+    },
+    "BRNN_Formation_9": {
+        "zh-CN": "牛九",
+        "zh-YTNN": "牛九",
+        "zh-TW": "牛九"
+    },
+    "BRNN_Formation_10": {
+        "zh-CN": "牛牛",
+        "zh-YTNN": "牛牛",
+        "zh-TW": "牛牛"
+    },
+    "BRNN_Formation_11": {
+        "zh-CN": "五花牛",
+        "zh-YTNN": "五花牛",
+        "zh-TW": "五花牛"
+    },
+    "BRNN_Formation_12": {
+        "zh-CN": "五小牛",
+        "zh-YTNN": "五小牛",
+        "zh-TW": "五小牛"
+    },
+    "NN_Broadcast_WinScore": {
+        "zh-CN": "恭喜玩家【<nick>】在【牛牛】中狂赢<score>元！",
+        "zh-YTNN": "恭喜玩家【<nick>】在【牛牛】中狂赢<score>元！",
+        "zh-TW": "恭喜玩家【<nick>】在【牛牛】中狂赢<score>元！"
+    },
+    "DZ_Broadcast_WinScore": {
+        "zh-CN": "恭喜玩家【<nick>】在【德州扑克】中狂赢<score>元！",
+        "zh-YTNN": "恭喜玩家【<nick>】在【德州扑克】中狂赢<score>元！",
+        "zh-TW": "恭喜玩家【<nick>】在【德州扑克】中狂赢<score>元！"
+    },
+    "BJL_Broadcast_WinScore": {
+        "zh-CN": "恭喜玩家【<nick>】在【百家乐】中狂赢<score>元！",
+        "zh-YTNN": "恭喜玩家【<nick>】在【百家乐】中狂赢<score>元！",
+        "zh-TW": "恭喜玩家【<nick>】在【百家乐】中狂赢<score>元！"
+    },
+    "BCBM_Broadcast_WinScore": {
+        "zh-CN": "恭喜玩家【<nick>】在【奔驰宝马】中狂赢<score>元！",
+        "zh-YTNN": "恭喜玩家【<nick>】在【奔驰宝马】中狂赢<score>元！",
+        "zh-TW": "恭喜玩家【<nick>】在【奔驰宝马】中狂赢<score>元！"
+    },
+    "LX9_Broadcast_WinScore": {
+        "zh-CN": "恭喜玩家【<nick>】在【水果机】中狂赢<score>元！",
+        "zh-YTNN": "恭喜玩家【<nick>】在【水果机】中狂赢<score>元！",
+        "zh-TW": "恭喜玩家【<nick>】在【水果机】中狂赢<score>元！"
+    },
+    "YYBF_Broadcast_WinScore": {
+        "zh-CN": "恭喜玩家【<nick>】在【一夜暴富】中赢得全部奖池, 狂赢<score>元！",
+        "zh-YTNN": "恭喜玩家【<nick>】在【一夜暴富】中赢得全部奖池，狂赢<score>元！",
+        "zh-TW": "恭喜玩家【<nick>】在【一夜暴富】中赢得全部奖池， 狂赢<score>元！"
+    }
+}

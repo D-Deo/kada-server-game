@@ -1,0 +1,40 @@
+{
+  "name": "vpserver",
+  "version": "0.0.1",
+  "private": false,
+  "scripts": {
+    "start": "node app.js",
+    "server": "node app.js",
+    "crontab": "node ./bin/crontab.js"
+  },
+  "dependencies": {
+    "Base64": "^1.0.1",
+    "async": "^2.0.1",
+    "body-parser": "^1.17.2",
+    "cookie-parser": "^1.4.3",
+    "cron-parser": "^2.5.0",
+    "debug": "^2.6.8",
+    "eventemitter3": "^3.0.1",
+    "express": "^4.15.3",
+    "express-session": "^1.15.3",
+    "i18n-nodejs": "^3.0.0",
+    "jade": "^1.11.0",
+    "log4js": "^1.0.1",
+    "morgan": "^1.8.2",
+    "mysql2": "^1.5.3",
+    "pomelo": "^2.2.5",
+    "redis": "^2.8.0",
+    "request": "^2.81.0",
+    "sequelize": "^4.37.7",
+    "serve-favicon": "^2.4.3",
+    "underscore": "^1.8.3",
+    "utility": "^1.12.0",
+    "uuid": "^3.2.1",
+    "xml2js": "^0.4.17"
+  },
+  "apidoc": {
+    "name": "游戏服务器API",
+    "title": "游戏服务器API",
+    "version": "1.0.0"
+  }
+}

@@ -1,0 +1,123 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "启动 主程序",
+            "program": "${workspaceFolder}/app.js"
+        },
+        {
+            "type": "node",
+            "request": "attach",
+            "name": "调试 HTTP 服务器",
+            "port": 35101
+        },
+        {
+            "type": "node",
+            "request": "attach",
+            "name": "调试 CONNECT 服务器",
+            "port": 31201
+        },
+        {
+            "type": "node",
+            "request": "attach",
+            "name": "调试 ZONE 服务器",
+            "port": 33101
+        },
+        {
+            "type": "node",
+            "request": "attach",
+            "name": "调试 USER 服务器",
+            "port": 32101
+        },
+        {
+            "type": "node",
+            "request": "attach",
+            "name": "调试 ROBOT 服务器",
+            "port": 36101
+        },
+        {
+            "type": "node",
+            "request": "attach",
+            "name": "调试 牛牛 服务器",
+            "port": 34101
+        },
+        {
+            "type": "node",
+            "request": "attach",
+            "name": "调试 德州扑克 服务器",
+            "port": 34102
+        },
+        {
+            "type": "node",
+            "request": "attach",
+            "name": "调试 百家乐 服务器",
+            "port": 34103
+        },
+        {
+            "type": "node",
+            "request": "attach",
+            "name": "调试 奔驰宝马 服务器",
+            "port": 34104
+        },
+        {
+            "type": "node",
+            "request": "attach",
+            "name": "调试 扎金花 服务器",
+            "port": 34105
+        },
+        {
+            "type": "node",
+            "request": "attach",
+            "name": "调试 水果连线 服务器",
+            "port": 34106
+        },
+        {
+            "type": "node",
+            "request": "attach",
+            "name": "调试 百人牛牛 服务器",
+            "port": 34107
+        },
+        {
+            "type": "node",
+            "request": "attach",
+            "name": "调试 一夜暴富 服务器",
+            "port": 34108
+        },
+        {
+            "type": "node",
+            "request": "attach",
+            "name": "调试 斗地主 服务器",
+            "port": 34109
+        },
+        {
+            "type": "node",
+            "request": "attach",
+            "name": "调试 捕鱼 服务器",
+            "port": 34110
+        },
+        {
+            "type": "node",
+            "request": "attach",
+            "name": "调试 飞禽走兽 服务器",
+            "port": 34111
+        },
+        {
+            "type": "node",
+            "request": "attach",
+            "name": "调试 二人麻将 服务器",
+            "port": 34112
+        },
+        {
+            "type": "node",
+            "request": "attach",
+            "name": "调试 十三水 服务器",
+            "port": 34114
+        }
+    ]
+}

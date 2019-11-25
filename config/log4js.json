@@ -1,0 +1,369 @@
+{
+	"appenders": [
+		{
+			"type": "logLevelFilter",
+			"level": "DEBUG",
+			"appender": {
+				"type": "console"
+			}
+		},
+		{
+			"type": "dateFile",
+			"filename": "${opts:base}/logs/pomelo/console",
+			"compress": true,
+			"daysToKeep": 7,
+			"pattern": "_yyyyMMdd.log",
+			"alwaysIncludePattern": true,
+			"category": [
+				"console"
+			]
+		},
+		{
+			"type": "dateFile",
+			"filename": "${opts:base}/logs/pomelo/http-log-${opts:serverId}.log",
+			"compress": true,
+			"daysToKeep": 7,
+			"keepFileExt": true,
+			"category": "http-log"
+		},
+		{
+			"type": "dateFile",
+			"filename": "${opts:base}/logs/pomelo/con-log-${opts:serverId}.log",
+			"compress": true,
+			"daysToKeep": 7,
+			"keepFileExt": true,
+			"category": "con-log"
+		},
+		{
+			"type": "dateFile",
+			"filename": "${opts:base}/logs/pomelo/rpc-log-${opts:serverId}.log",
+			"compress": true,
+			"daysToKeep": 7,
+			"keepFileExt": true,
+			"category": "rpc-log"
+		},
+		{
+			"type": "dateFile",
+			"filename": "${opts:base}/logs/pomelo/forward-log-${opts:serverId}.log",
+			"compress": true,
+			"daysToKeep": 7,
+			"keepFileExt": true,
+			"category": "forward-log"
+		},
+		{
+			"type": "dateFile",
+			"filename": "${opts:base}/logs/pomelo/rpc-debug-${opts:serverId}.log",
+			"compress": true,
+			"daysToKeep": 7,
+			"keepFileExt": true,
+			"category": "rpc-debug"
+		},
+		{
+			"type": "dateFile",
+			"filename": "${opts:base}/logs/pomelo/crash.log",
+			"compress": true,
+			"daysToKeep": 7,
+			"keepFileExt": true,
+			"category": "crash-log"
+		},
+		{
+			"type": "dateFile",
+			"filename": "${opts:base}/logs/pomelo/admin.log",
+			"compress": true,
+			"daysToKeep": 7,
+			"keepFileExt": true,
+			"category": "admin-log"
+		},
+		{
+			"type": "dateFile",
+			"filename": "${opts:base}/logs/pomelo/pomelo-${opts:serverId}.log",
+			"compress": true,
+			"daysToKeep": 7,
+			"keepFileExt": true,
+			"category": "pomelo"
+		},
+		{
+			"type": "dateFile",
+			"filename": "${opts:base}/logs/pomelo/pomelo-admin.log",
+			"compress": true,
+			"daysToKeep": 7,
+			"keepFileExt": true,
+			"category": "pomelo-admin"
+		},
+		{
+			"type": "dateFile",
+			"filename": "${opts:base}/logs/pomelo/pomelo-rpc-${opts:serverId}.log",
+			"compress": true,
+			"daysToKeep": 7,
+			"keepFileExt": true,
+			"category": "pomelo-rpc"
+		},
+		{
+			"type": "dateFile",
+			"filename": "${opts:base}/logs/game/${opts:serverId}.log",
+			"compress": true,
+			"daysToKeep": 7,
+			"keepFileExt": true,
+			"category": "game"
+		},
+		{
+			"type": "dateFile",
+			"filename": "${opts:base}/logs/jackpot/${opts:serverId}.log",
+			"compress": true,
+			"daysToKeep": 7,
+			"keepFileExt": true,
+			"category": "game-jackpot"
+		},
+		{
+			"type": "dateFile",
+			"filename": "${opts:base}/logs/nn/game-${opts:serverId}.log",
+			"compress": true,
+			"daysToKeep": 7,
+			"keepFileExt": true,
+			"category": "game-nn"
+		},
+		{
+			"type": "dateFile",
+			"filename": "${opts:base}/logs/dz/game-${opts:serverId}.log",
+			"compress": true,
+			"daysToKeep": 7,
+			"keepFileExt": true,
+			"category": "game-dz"
+		},
+		{
+			"type": "dateFile",
+			"filename": "${opts:base}/logs/dz/game-robot.log",
+			"compress": true,
+			"daysToKeep": 7,
+			"keepFileExt": true,
+			"category": "game-dz-robot"
+		},
+		{
+			"type": "dateFile",
+			"filename": "${opts:base}/logs/bjl/game-${opts:serverId}.log",
+			"compress": true,
+			"daysToKeep": 7,
+			"keepFileExt": true,
+			"category": "game-bjl"
+		},
+		{
+			"type": "dateFile",
+			"filename": "${opts:base}/logs/bjl/game-robot.log",
+			"compress": true,
+			"daysToKeep": 7,
+			"keepFileExt": true,
+			"category": "game-bjl-robot"
+		},
+		{
+			"type": "dateFile",
+			"filename": "${opts:base}/logs/bcbm/game-${opts:serverId}.log",
+			"compress": true,
+			"daysToKeep": 7,
+			"keepFileExt": true,
+			"category": "game-bcbm"
+		},
+		{
+			"type": "dateFile",
+			"filename": "${opts:base}/logs/bcbm/game-robot.log",
+			"compress": true,
+			"daysToKeep": 7,
+			"keepFileExt": true,
+			"category": "game-bcbm-robot"
+		},
+		{
+			"type": "dateFile",
+			"filename": "${opts:base}/logs/zjh/game-${opts:serverId}.log",
+			"compress": true,
+			"daysToKeep": 7,
+			"keepFileExt": true,
+			"category": "game-zjh"
+		},
+		{
+			"type": "dateFile",
+			"filename": "${opts:base}/logs/lx9/game-${opts:serverId}.log",
+			"compress": true,
+			"daysToKeep": 7,
+			"keepFileExt": true,
+			"category": "game-lx9"
+		},
+		{
+			"type": "dateFile",
+			"filename": "${opts:base}/logs/brnn/game-${opts:serverId}.log",
+			"compress": true,
+			"daysToKeep": 7,
+			"keepFileExt": true,
+			"category": "game-brnn"
+		},
+		{
+			"type": "dateFile",
+			"filename": "${opts:base}/logs/brnn/game-robot.log",
+			"compress": true,
+			"daysToKeep": 7,
+			"keepFileExt": true,
+			"category": "game-brnn-robot"
+		},
+		{
+			"type": "dateFile",
+			"filename": "${opts:base}/logs/brnn/game-temp.log",
+			"compress": true,
+			"daysToKeep": 7,
+			"keepFileExt": true,
+			"category": "game-brnn-temp"
+		},
+		{
+			"type": "dateFile",
+			"filename": "${opts:base}/logs/yybf/game-${opts:serverId}.log",
+			"compress": true,
+			"daysToKeep": 7,
+			"keepFileExt": true,
+			"category": "game-yybf"
+		},
+		{
+			"type": "dateFile",
+			"filename": "${opts:base}/logs/yybf/game-robot.log",
+			"compress": true,
+			"daysToKeep": 7,
+			"keepFileExt": true,
+			"category": "game-yybf-robot"
+		},
+		{
+			"type": "dateFile",
+			"filename": "${opts:base}/logs/yybf/game-open.log",
+			"compress": true,
+			"daysToKeep": 7,
+			"keepFileExt": true,
+			"category": "game-yybf-open"
+		},
+		{
+			"type": "dateFile",
+			"filename": "${opts:base}/logs/ddz/game-${opts:serverId}.log",
+			"compress": true,
+			"daysToKeep": 7,
+			"keepFileExt": true,
+			"category": "game-ddz"
+		},
+		{
+			"type": "dateFile",
+			"filename": "${opts:base}/logs/ddz/game-robot.log",
+			"compress": true,
+			"daysToKeep": 7,
+			"keepFileExt": true,
+			"category": "game-ddz-robot"
+		},
+		{
+			"type": "dateFile",
+			"filename": "${opts:base}/logs/lkpy/game-${opts:serverId}.log",
+			"compress": true,
+			"daysToKeep": 7,
+			"keepFileExt": true,
+			"category": "game-lkpy"
+		},
+		{
+			"type": "dateFile",
+			"filename": "${opts:base}/logs/fqzs/game.log",
+			"compress": true,
+			"daysToKeep": 7,
+			"keepFileExt": true,
+			"category": "game-fqzs"
+		},
+		{
+			"type": "dateFile",
+			"filename": "${opts:base}/logs/fqzs/game-robot.log",
+			"compress": true,
+			"daysToKeep": 7,
+			"keepFileExt": true,
+			"category": "game-fqzs-robot"
+		},
+		{
+			"type": "dateFile",
+			"filename": "${opts:base}/logs/ermj/game.log",
+			"compress": true,
+			"daysToKeep": 7,
+			"keepFileExt": true,
+			"category": "game-ermj"
+		},
+		{
+			"type": "dateFile",
+			"filename": "${opts:base}/logs/ermj/game-robot.log",
+			"compress": true,
+			"daysToKeep": 7,
+			"keepFileExt": true,
+			"category": "game-ermj-robot"
+		},
+		{
+			"type": "dateFile",
+			"filename": "${opts:base}/logs/pj/game.log",
+			"compress": true,
+			"daysToKeep": 7,
+			"keepFileExt": true,
+			"category": "game-pj"
+		},
+		{
+			"type": "dateFile",
+			"filename": "${opts:base}/logs/pj/game-robot.log",
+			"compress": true,
+			"daysToKeep": 7,
+			"keepFileExt": true,
+			"category": "game-pj-robot"
+		},
+		{
+			"type": "dateFile",
+			"filename": "${opts:base}/logs/sss/game.log",
+			"compress": true,
+			"daysToKeep": 7,
+			"keepFileExt": true,
+			"category": "game-sss"
+		},
+		{
+			"type": "dateFile",
+			"filename": "${opts:base}/logs/sss/game-robot.log",
+			"compress": true,
+			"daysToKeep": 7,
+			"keepFileExt": true,
+			"category": "game-sss-robot"
+		}
+	],
+	"levels": {
+		"http-log": "ERROR",
+		"con-log": "ERROR",
+		"rpc-log": "ERROR",
+		"forward-log": "ERROR",
+		"rpc-debug": "ERROR",
+		"crash-log": "ERROR",
+		"admin-log": "ERROR",
+		"pomelo": "ERROR",
+		"pomelo-admin": "ERROR",
+		"pomelo-rpc": "ERROR",
+		"game": "ERROR",
+		"game-jackpot": "ERROR",
+		"game-nn": "ERROR",
+		"game-dz": "ERROR",
+		"game-dz-robot": "ERROR",
+		"game-bjl": "ERROR",
+		"game-bjl-robot": "ERROR",
+		"game-bcbm": "ERROR",
+		"game-bcbm-robot": "ERROR",
+		"game-zjh": "ERROR",
+		"game-zjh-robot": "ERROR",
+		"game-lx9": "ERROR",
+		"game-brnn": "ERROR",
+		"game-brnn-robot": "ERROR",
+		"game-yybf": "ERROR",
+		"game-yybf-robot": "ERROR",
+		"game-yybf-open": "ERROR",
+		"game-ddz": "ERROR",
+		"game-ddz-robot": "ERROR",
+		"game-lkpy": "ERROR",
+		"game-fqzs": "ERROR",
+		"game-fqzs-robot": "ERROR",
+		"game-ermj": "ERROR",
+		"game-ermj-robot": "ERROR",
+		"game-pj": "ERROR",
+		"game-pj-robot": "ERROR",
+		"game-sss": "ERROR",
+		"game-sss-robot": "ERROR"
+	},
+	"replaceConsole": true,
+	"lineDebug": false,
+	"reloadSecs": 60
+}
