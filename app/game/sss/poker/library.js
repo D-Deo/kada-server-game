@@ -148,7 +148,7 @@ class Library {
             logger.info('最终手牌', len, this.whiteHand.toJson());
         }
 
-        f(seatMgr.isBlackList()) {
+        if (seatMgr.isBlackList()) {
             logger.info('开启黑名单', seatMgr.isBlackList());
             //随机发牌，重复数字不出现4次，不出现连顺，不出现同色超过4次，能没王就没王
             let ctrl = { point: {}, suit: {} };
