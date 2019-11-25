@@ -9,16 +9,11 @@ const _ = require('underscore');
 
 let sdk = module.exports = {};
 
-// 瑾顺
-// sdk.APPID = "wx66dc212a01ed42c1";
-// sdk.APPSECRET = "24f4e0f311aa25220571529c2202ff5f";
-
-// 猪猪在线
-sdk.APPID = "wx8c05df4221b57c10";
-sdk.APPSECRET = "ae8e0b26a04388b07240a6b467ed8ea6";
-sdk.MCHID = "1551538791";
-sdk.KEY = "FB430AE48ECFD7436B90C312D36CC9CA";
-sdk.NOTIFY_URL = 'http://122.51.9.123:30099/api/wx';
+sdk.APPID = "";
+sdk.APPSECRET = "";
+sdk.MCHID = "";
+sdk.KEY = "";
+sdk.NOTIFY_URL = 'http://127.0.0.1:30099/api/wx';
 
 sdk.md5 = (data) => {
     let str = "";
