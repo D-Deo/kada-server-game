@@ -19,9 +19,11 @@ class Hand {
         //this.seat.sendAction(constants.RoomAction.PLAYER_ADD_CARDS(), _.map(cards, (c) => c.toJson()));
         // this.room.getComp('viewer').sendAction(constants.RoomAction.PLAYER_SHOW_CARDS(), {seat: this.seat.getIndex(), cards: _.size(cards)});
     }
+
     addLastCards(card) {
         this.cards[4] = card[0];
     }
+
     sendCards() {
         this.seat.sendAction(constants.RoomAction.PLAYER_ADD_CARDS(), _.map(this.cards, (c) => c.toJson()));
     }
@@ -35,9 +37,11 @@ class Hand {
             this.seat.sendAction(constants.RoomAction.PLAYER_ADD_CARDS(), _.map(card, (c) => c.toJson()));
         }
     }
+
     clearFormation() {
         this.formation = null;
     }
+    
     format() {
         if (this.formation) {
             return this.formation;
@@ -74,6 +78,7 @@ class Hand {
         let stateMgr = this.room.getComp('state');
         this.cards[4] = stateMgr.getLibrary().getCard(index);
     }
+
     init() {
         let stateMgr = this.room.getComp('state');
         let jackpotMgr = this.room.getComp('jackpot');

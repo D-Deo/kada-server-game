@@ -64,7 +64,7 @@ class StateManager extends Super {
     }
 
     washLibrary() {
-        let needs = this.room.getComp('seat').getSittingSeats() * nncons.HAND_CAPACITY();
+        let needs = this.room.getComp('seat').getSittingSeats().length * nncons.HAND_CAPACITY();
         if (this.library.haveEnoughCard(needs)) {
             return;
         }
@@ -83,7 +83,7 @@ class StateManager extends Super {
     isBankerSeat(seat) {
         return this.banker === seat.getIndex();
     }
-    
+
     resetBanker(random = false) {
         let seats = _.map(this.room.getComp('seat').getSittingSeats(), (s) => s.getIndex());
         if (random) {
@@ -126,8 +126,7 @@ class StateManager extends Super {
 
         if (this.room.getAttr('standard')) {
             this.changeState(nncons.RoomState.BANKER());
-        }
-        else {
+        } else {
             this.changeState(nncons.RoomState.FIRST_DEAL());
         }
     }
