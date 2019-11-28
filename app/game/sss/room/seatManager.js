@@ -57,7 +57,9 @@ class SeatManager extends Super {
                 seat.getUserId(),
                 (err, state) => {
                     if (err) return console.error(err);
-                    seat.getUser().updateState(state);
+                    if (seat && seat.getUser()) {
+                        seat.getUser().updateState(state);
+                    }
                 }
             );
         });

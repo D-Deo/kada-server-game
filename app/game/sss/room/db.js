@@ -2,6 +2,7 @@ const cons = require('../../../common/constants');
 const Super = require('../../../room/db');
 const utils = require('../../../utils');
 const _ = require('underscore');
+const zlib = require('zlib');
 
 
 class Db extends Super {
@@ -21,10 +22,30 @@ class Db extends Super {
 
     onRoomClear() {
         let balance = this.room.getComp('state').getBalance();
-        this.update({
-            balance: balance ? JSON.stringify(balance) : null,
-            state: cons.RoomRecord.END(),
-            endTime: utils.date.timestamp()
+        if (!balance) {
+            this.update({
+                balance: null,
+                state: cons.RoomRecord.END(),
+                endTime: utils.date.timestamp()
+            });
+            return;
+        }
+        
+        zlib.gzip(JSON.stringify(balance), (err, buffer) => {
+            if (err) {
+                this.update({
+                    balance: null,
+                    state: cons.RoomRecord.END(),
+                    endTime: utils.date.timestamp()
+                });
+                return console.error(err);
+            }
+
+            this.update({
+                balance: Buffer.from(buffer).toString('base64'),
+                state: cons.RoomRecord.END(),
+                endTime: utils.date.timestamp()
+            });
         });
     }
 }

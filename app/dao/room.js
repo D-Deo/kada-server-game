@@ -1,6 +1,8 @@
 const constants = require('../common/constants');
 const db = require('../db');
 const pomelo = require('pomelo');
+const zlib = require('zlib');
+const logger = require('pomelo-logger').getLogger('game');
 
 
 let dao = module.exports = {};
@@ -21,12 +23,17 @@ dao.recordCreate = (params, cb) => {
 
 
 dao.recordPlay = (id, cb) => {
-    db.update('room_record', {id}, {state: constants.RoomRecord.PLAYING()}, cb);
+    db.update('room_record', { id }, { state: constants.RoomRecord.PLAYING() }, cb);
 };
 
 
 dao.recordEnd = (id, balance, cb) => {
-    db.update('room_record', {id}, {balance: JSON.stringify(balance), state: constants.RoomRecord.END()}, cb);
+    zlib.gzip(JSON.stringify(balance), (err, buffer) => {
+        if (err) {
+            return logger.error(err);
+        }
+        db.update('room_record', { id }, { balance: Buffer.from(buffer).toString('base64'), state: constants.RoomRecord.END() }, cb);
+    });
 };
 
 
