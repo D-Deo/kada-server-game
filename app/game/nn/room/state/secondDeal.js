@@ -18,9 +18,9 @@ class SecondDealState extends Super {
             seat.getHand().sendLastCard();
         });
 
-        _.each(this.room.getComp('seat').getPlayingSeats(), (seat) => {
-            seat.getHand().clearFormation();
-        });
+        // _.each(this.room.getComp('seat').getPlayingSeats(), (seat) => {
+        //     seat.getHand().clearFormation();
+        // });
 
         // let jackpotMgr = this.room.getComp('jackpot');
         // let jackpot = jackpotMgr.getJackpot();
