@@ -161,8 +161,9 @@ class User extends EventEmitter {
                     state: 1
                 }
             });
-            console.debug('当前用户', this.id, '总充值', payTotal * 100);
+            payTotal = payTotal || 0;
             this.attrs.payTotal = payTotal * 100;
+            console.debug('当前用户', this.id, '总充值', this.attrs.payTotal);
         }
     }
 
