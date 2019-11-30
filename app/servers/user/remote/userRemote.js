@@ -337,11 +337,11 @@ Remote.prototype.completePay = function (orderId, money, commit, cb) {
             return;
         }
 
-        user.getComp('bag').changeItem(cons.Item.DIAMOND(), money * userpay.rate, {
+        user.getComp('bag').changeItem(cons.Item.GOLD(), money * userpay.rate, {
             from: orderId,
             reason: commit ? cons.ItemChangeReason.USERPAY_Manual() : cons.ItemChangeReason.USERPAY()
         });
-        user.setAttr('payTotal', user.getAttr('payTotal') + money * userpay.rate, { ignoreSave: true });
+        user.setAttr('payTotal', (user.getAttr('payTotal') || 0) + money * userpay.rate, { ignoreSave: true });
 
         dao.mail.create({
             userId: userpay.userId,

@@ -82,7 +82,7 @@ class UserManager {
 
         user.loadAttrs(attrs);
 
-        user.getComp('bag').changeItem(cons.Item.DIAMOND(), cons.NEW_USER_DIAMOND(), { from: attrs.account + ":" + attrs.password, reason: cons.ItemChangeReason.NEW_USER() });
+        // user.getComp('bag').changeItem(cons.Item.DIAMOND(), cons.NEW_USER_DIAMOND(), { from: attrs.account + ":" + attrs.password, reason: cons.ItemChangeReason.NEW_USER() });
         // user.getComp('bag').changeItem(cons.Item.GOLD(), parseInt(settings[1].value) || 0, { from: attrs.account + ":" + attrs.password, reason: cons.ItemChangeReason.NEW_USER() });
         // user.getComp('bag').changeItem(cons.Item.BANK(), cons.NEW_USER_BANK(), { from: attrs.account + ":" + attrs.password, reason: cons.ItemChangeReason.NEW_USER() });
 
