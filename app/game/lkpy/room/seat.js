@@ -460,7 +460,7 @@ class Seat extends Super {
         let winGold = jackpotMgr.getWinGold();
         let loseGold = jackpotMgr.getLoseGold();
 
-        let payRate = payTotal ? ((userJackpot + payTotal) / payTotal * 100) : (userJackpot / 100);
+        let payRate = payTotal ? ((userJackpot + payTotal) / payTotal * 100) : 0;
         if (payRate > 100 && payRate > winGoldRate + 100) {
             caught = false;
         }
