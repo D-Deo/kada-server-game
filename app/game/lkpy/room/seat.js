@@ -461,16 +461,16 @@ class Seat extends Super {
         let loseGold = jackpotMgr.getLoseGold();
 
         let payRate = payTotal ? ((userJackpot + payTotal) / payTotal * 100) : 0;
-        if (payRate > 100 && payRate > winGoldRate + 100) {
+        if (winGoldRate && payRate > 100 && payRate > winGoldRate + 100) {
             caught = false;
         }
-        if (payRate < 100 && (100 - payRate) > loseGoldRate) {
+        if (loseGoldRate && payRate < 100 && (100 - payRate) > loseGoldRate) {
             caught = true;
         }
-        if (userJackpot > 0 && userJackpot > winGold) {
+        if (winGold && userJackpot > 0 && userJackpot > winGold) {
             caught = false;
         }
-        if (userJackpot < 0 && -userJackpot > loseGold) {
+        if (loseGold && userJackpot < 0 && -userJackpot > loseGold) {
             caught = true;
         }
 
