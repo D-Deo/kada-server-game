@@ -12,15 +12,16 @@ module.exports = {};
 
 
 module.exports.create = () => {
-    let r = _.random(0, 100);
+    return levels[0];
+    // let r = _.random(0, 100);
 
-    if(r <= 20) {
-        return levels[0];
-    }
+    // if(r <= 20) {
+    //     return levels[0];
+    // }
 
-    if(r <= 70) {
-        return levels[1];
-    }
+    // if(r <= 70) {
+    //     return levels[1];
+    // }
 
-    return levels[2];
+    // return levels[2];
 };
