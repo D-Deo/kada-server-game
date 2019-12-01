@@ -50,7 +50,7 @@ class JackpotManager extends Super {
                     return score;
                 }, 0);
 
-                let weight = (userJackpot + userPayTotal) / userPayTotal * 100;
+                let weight = userPayTotal ? (userJackpot + userPayTotal) / userPayTotal * 100 : 0;
                 let r = _.random(99);
                 let d = (100 - weight) * 10;
 

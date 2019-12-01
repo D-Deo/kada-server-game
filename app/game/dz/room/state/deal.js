@@ -80,7 +80,7 @@ class DealState extends Super {
             }
             let userJackpot = jackpotMgr.getUserJackpot(seat.getUserId());
             let userPayTotal = seat.getUser().getPayTotal();
-            let realPoint = (userJackpot + userPayTotal) / userPayTotal * 100;
+            let realPoint = userPayTotal ? (userJackpot + userPayTotal) / userPayTotal * 100 : 0;
             this.logger.info('玩家', seat.getUserId(), '输赢', userJackpot, '总充', userPayTotal, '实际', realPoint);
             return realPoint;
         });
@@ -116,7 +116,7 @@ class DealState extends Super {
             let userJackpot = jackpotMgr.getUserJackpot(seat.getUserId());
             let userPayTotal = seat.getUser().getPayTotal();
 
-            let p = ((userJackpot + userPayTotal) / userPayTotal * 100 - 100) * 10;
+            let p = userPayTotal ? ((userJackpot + userPayTotal) / userPayTotal * 100 - 100) * 10 : 0;
             let d = rate - p;
             this.logger.info('玩家', seat.getUserId(), '随机', r, '种子', d, '个控', p);
 
