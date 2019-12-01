@@ -432,7 +432,7 @@ class Seat extends Super {
 
         // let userChange = 0;
         // let userChange = (100 - (userJackpot + payTotal) / payTotal * 100) / 10;
-        let userChange = userJackpot / (this.room.getAttr('baseScore') * 10000);
+        let userChange = userJackpot / (this.room.getAttr('baseScore') * 100000);
         // if (r <= winRate) {
         // }
         change -= userChange;
