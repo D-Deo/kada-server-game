@@ -119,7 +119,7 @@ Handler.prototype.reconnect = function (msg, session, next) {
         return;
     }
 
-    if (!room.isPrivate() && !room.playing || !room.getComp('seat').unhostUser(userSession)) {
+    if (!room.isPrivate() && !room.getComp('seat').unhostUser(userSession) /* || !room.playing*/) {
         pomelo.app.rpc.user.roomRemote.leaveRoom(session, userSession.getUserId(), null, () => { });
         utils.next(next, constants.ResultCode.ROOM_ERROR());
         return;
