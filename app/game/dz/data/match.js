@@ -16,8 +16,8 @@ data.zone.areas = [{
     idGenerator: { length: 10, min: 1000000 },
     params: {
         baseScore: 500,
-        scoreMin: 25000,
-        scoreMax: 250000,
+        scoreMin: 10000,
+        scoreMax: 200000,
         roundCost: 0
     }
 }, {

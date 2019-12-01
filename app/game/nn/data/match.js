@@ -8,7 +8,7 @@ data.zone.areas = [{
     params: {
         standard: true,
         baseScore: 100,
-        scoreMin: 1500,
+        scoreMin: 1000,
         scoreMax: 0,
         roundCost: 0
     }
@@ -18,7 +18,7 @@ data.zone.areas = [{
     params: {
         standard: true,
         baseScore: 500,
-        scoreMin: 7500,
+        scoreMin: 10000,
         scoreMax: 0,
         roundCost: 0
     }
@@ -28,7 +28,7 @@ data.zone.areas = [{
     params: {
         standard: false,
         baseScore: 1000,
-        scoreMin: 15000,
+        scoreMin: 50000,
         scoreMax: 0,
         roundCost: 0,
     }
