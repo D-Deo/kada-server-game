@@ -260,8 +260,8 @@ constants.ResultCode.USER_BANK_PASSWORD_ERROR = _.constant({ code: 10025, msg: "
 constants.ResultCode.USER_NO_BANK_MONEY = _.constant({ code: 10026, msg: "银行余额不足" });
 constants.ResultCode.USER_BANK_PASSWORD_WRONG = _.constant({ code: 10027, msg: "原银行密码不匹配，请重新输入" });
 constants.ResultCode.USER_PASSWORD_WRONG = _.constant({ code: 10028, msg: '原密码不匹配，请重新输入' });
-constants.ResultCode.USER_BANK_ADD_WRONG = _.constant({ code: 10029, msg: '添加的银行卡需与账户姓名一致' });
-constants.ResultCode.USER_BANK_SAME_WRONG = _.constant({ code: 10030, msg: '当前银行卡已经被绑定过，请换一张' });
+constants.ResultCode.USER_BANK_ADD_WRONG = _.constant({ code: 10029, msg: '添加的支付宝需与账户姓名一致' });
+constants.ResultCode.USER_BANK_SAME_WRONG = _.constant({ code: 10030, msg: '当前支付宝已经被绑定过，请换一张' });
 constants.ResultCode.USER_DEVICE_USED = _.constant({ code: 10100, msg: '该设备已注册' });
 
 // 房间相关
