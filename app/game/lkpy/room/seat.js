@@ -66,7 +66,7 @@ class Seat extends Super {
             this.trusteeship = false;
             this.room.getComp('state').setTrust(false);
             this.sendAction(cons.RoomAction.HANDLE_ROBOT(), { trusteeship: false });
-            _.some(seatMgr.getSittingSeats_User(), (seat) => {
+            _.some(this.room.getComp('seat').getSittingSeats_User(), (seat) => {
                 if (!seat.isRobot() && !seat.isHosting()) {
                     seat.setTrust(true);
                     this.room.getComp('state').setTrust(true);
