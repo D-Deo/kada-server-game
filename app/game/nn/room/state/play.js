@@ -52,10 +52,10 @@ class PlayState extends Super {
             return s.isPlaying() ? s.getHand().format() : null;
         });
         this.room.getComp('channel').sendAction(cons.RoomAction.PLAYER_SHOW_HAND(), _.map(formations, (f) => f === null ? null : f.toJson()));
-
-        setTimeout(() => {
-            this.room.getComp('state').changeState(nncons.RoomState.RESULT());
-        }, (_.size(this.room.getComp('seat').getPlayingSeats()) * 0.4 + 0.2) * 1000);
+        
+        this.room.getComp('state').changeState(nncons.RoomState.RESULT());
+        // setTimeout(() => {
+        // }, (_.size(this.room.getComp('seat').getPlayingSeats()) * 0.4 + 0.2) * 1000);
     }
 
 }
