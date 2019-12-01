@@ -115,7 +115,9 @@ class SeatManager extends Component {
     }
 
     removeHostingUsers() {
+        console.log('removeHostingUsers len:', this.getHostingSeats().length);
         _.each(this.getHostingSeats(), (seat) => {
+            console.log('removeHostingUsers seat:', seat.toJson());
             seat.unbindUser(constants.RoomClearReason.KICK_HOSTING_USER())
         });
     }
