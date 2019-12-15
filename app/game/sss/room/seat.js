@@ -10,22 +10,22 @@ class Seat extends Super {
         super(room, index);
 
         this.logger = this.room.getComp('logger');
-        this.timer = new IntervalTimer(ssscons.PlayerStateInterval.WAIT(), () => this.timeout());
+        // this.timer = new IntervalTimer(ssscons.PlayerStateInterval.WAIT(), () => this.timeout());
         // this.clear();
     }
 
     bindUser(user) {
         super.bindUser(user);
-        this.timer.start();
+        // this.timer.start();
     }
 
     unbindUser(reason, cb) {
-        this.timer.stop();
+        // this.timer.stop();
         return super.unbindUser(reason, cb);
     }
 
     timeout() {
-        this.timer.stop();
+        // this.timer.stop();
         this.setReady();
     }
 
@@ -197,8 +197,8 @@ class Seat extends Super {
         json.played = this.played;
         json.showed = this.showed;
         json.finalScore = this.finalScore;
-        json.time = this.timer.remain();
-        json.interval = this.timer.getInterval();
+        // json.time = this.timer.remain();
+        // json.interval = this.timer.getInterval();
         return json;
     }
 
