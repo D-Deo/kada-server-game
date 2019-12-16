@@ -55,7 +55,7 @@ Remote.prototype.register = function (attrs, recommender, cb) {
 };
 
 
-Remote.prototype.login = function (session, attrs, gps, cb) {
+Remote.prototype.login = async (session, attrs, gps, cb) => {
     let user = null;
 
     if (attrs.account && attrs.account.length) {
@@ -67,48 +67,46 @@ Remote.prototype.login = function (session, attrs, gps, cb) {
     //     return;
     // }
 
-    (async () => {
-        if (user == null) {
-            // attrs.account = '';
-            // attrs.ip = session.ip;
+    if (user == null) {
+        // attrs.account = '';
+        // attrs.ip = session.ip;
 
-            // let SameIPLogin = await model.Setting.find({ where: { key: 'SameIPLogin' } });
-            // let SameDeviceLogin = await model.Setting.find({ where: { key: 'SameDeviceLogin' } });
+        // let SameIPLogin = await model.Setting.find({ where: { key: 'SameIPLogin' } });
+        // let SameDeviceLogin = await model.Setting.find({ where: { key: 'SameDeviceLogin' } });
 
-            // let userIpCount = await model.User.count({ where: { ip: attrs.ip } });
-            // let userDeviceCount = await model.User.count({ where: { deviceid: attrs.deviceid } });
+        // let userIpCount = await model.User.count({ where: { ip: attrs.ip } });
+        // let userDeviceCount = await model.User.count({ where: { deviceid: attrs.deviceid } });
 
-            // if (userIpCount >= (SameIPLogin.value || 5)) {              //同IP最多 SameIPLogin 个注册账号
-            //     utils.cb(cb, constants.ResultCode.USER_SAME_IP_OVER());
-            //     return;
-            // }
-
-            // if ((attrs.device != 'PCH5' && attrs.device != 'H5') && userDeviceCount >= (SameDeviceLogin.value || 1)) {      // 同设备限制
-            //     utils.cb(cb, constants.ResultCode.USER_SAME_DEVICE_OVER());
-            //     return;
-            // }
-
-            user = await UserManager.get().createUser(attrs);
-        }
-
-        // if (user.getAttr('type') != constants.User.GUEST()) {
-        //     utils.cb(cb, constants.ResultCode.USER_ACCOUNT_USED());
+        // if (userIpCount >= (SameIPLogin.value || 5)) {              //同IP最多 SameIPLogin 个注册账号
+        //     utils.cb(cb, constants.ResultCode.USER_SAME_IP_OVER());
         //     return;
         // }
 
-        let head = attrs.head || user.getAttr('head');
-        let nick = attrs.nick || user.getAttr('nick');
-        let sex = attrs.sex || user.getAttr('sex');
-        let type = attrs.type || user.getAttr('type');
-        let device = attrs.device || user.getAttr('device');
-        let deviceid = attrs.deviceid || user.getAttr('deviceid');
-        let bankId = attrs.bankId || user.getAttr('bankId');
-        let agentId = attrs.agentId || user.getAttr('agentId');
-        let ip = attrs.ip || user.getAttr('ip');
-        let role = user.getAttr('role') || attrs.role;
-        let deviceinfo = attrs.deviceinfo || user.getAttr('deviceinfo');
-        utils.cbProm(cb, user.login(UserSession.fromUserId(user.getId(), session), { head, nick, sex, type, device, bankId, agentId, deviceid, ip, role, deviceinfo }, gps));
-    })();
+        // if ((attrs.device != 'PCH5' && attrs.device != 'H5') && userDeviceCount >= (SameDeviceLogin.value || 1)) {      // 同设备限制
+        //     utils.cb(cb, constants.ResultCode.USER_SAME_DEVICE_OVER());
+        //     return;
+        // }
+
+        user = await UserManager.get().createUser(attrs);
+    }
+
+    // if (user.getAttr('type') != constants.User.GUEST()) {
+    //     utils.cb(cb, constants.ResultCode.USER_ACCOUNT_USED());
+    //     return;
+    // }
+
+    let head = attrs.head || user.getAttr('head');
+    let nick = attrs.nick || user.getAttr('nick');
+    let sex = attrs.sex || user.getAttr('sex');
+    let type = attrs.type || user.getAttr('type');
+    let device = attrs.device || user.getAttr('device');
+    let deviceid = attrs.deviceid || user.getAttr('deviceid');
+    let bankId = attrs.bankId || user.getAttr('bankId');
+    let agentId = attrs.agentId || user.getAttr('agentId');
+    let ip = attrs.ip || user.getAttr('ip');
+    let role = user.getAttr('role') || attrs.role;
+    let deviceinfo = attrs.deviceinfo || user.getAttr('deviceinfo');
+    utils.cbProm(cb, user.login(UserSession.fromUserId(user.getId(), session), { head, nick, sex, type, device, bankId, agentId, deviceid, ip, role, deviceinfo }, gps));
 };
 
 

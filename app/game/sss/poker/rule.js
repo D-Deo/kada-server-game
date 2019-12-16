@@ -77,7 +77,7 @@ class Rule {
 
     constructor(fmt) {
         this.fmt = {
-			anim: fmt.anim(),
+            anim: fmt.anim(),
             name: fmt.name(),
             type: fmt.type(),
             score: fmt.score()
@@ -921,6 +921,8 @@ class StRule extends Rule {
             return r;
         }
 
+        if (!this.cards) return 0;
+
         for (let i = 0; i < this.cards.length; i++) {
             let r = this.cards[i].compare(rule.cards[i]);
             if (r != 0) {
@@ -948,6 +950,9 @@ class StRule extends Rule {
             // A最大
             if (this.value.getPoint() == cons.Poker.CardPoint.ACE()) {
                 return 14;
+            }
+            if (this.value.getSuit() == cons.Poker.CardSuit.JOKER()) {
+                return 20;
             }
             return this.value.getPoint();
         }
