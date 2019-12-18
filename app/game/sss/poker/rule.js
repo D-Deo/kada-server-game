@@ -846,7 +846,6 @@ class SzRule extends Rule {
                 this.value = _.last(cards);
             } else {
                 cards.unshift(cards.pop());
-
                 if (_.last(cards).getPoint() < n) {
                     this.value = new Card(cons.Poker.CardSuit.JOKER(), cons.Poker.CardPoint.FIVE(), 0);
                 } else if (_.last(cards).getPoint() == n) {
@@ -864,7 +863,7 @@ class SzRule extends Rule {
                 this.value = _.last(cards);
             } else {
                 this.faked = true;
-                this.value = new Card(cons.Poker.CardSuit.JOKER(), _.last(cards).getPoint() + this.jokerCnt, 0);
+                this.value = new Card(cons.Poker.CardSuit.JOKER(), _.first(cards).getPoint() + n - 1, 0);
             }
         }
 
