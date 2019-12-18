@@ -1,3 +1,6 @@
+# DB
+*.sql
+
 # Logs
 logs
 *.log
