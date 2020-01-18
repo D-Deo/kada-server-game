@@ -155,7 +155,7 @@ constants.RoomStateInterval = {
 //     FISH_BOMB: _.constant(45000), // 鱼王
 //     FISH_LOCK: _.constant(40000), // 鱼王
 //     FISH_SUPERBOMB: _.constant(50000), // 鱼王
-//     FISH_LK: _.constant(30000), // 李逵
+//     FISH_BOSS: _.constant(30000), // 李逵
 //     FISH_3YUAN: _.constant(5000), // 大三元
 //     FISH_4XI: _.constant(5000), // 大四喜
 //     FREEZE: _.constant(10000), // 冰冻效果
@@ -172,7 +172,7 @@ constants.Interval = {
     FISH_BOMB: _.constant(45000), // 鱼王
     FISH_LOCK: _.constant(40000), // 鱼王
     FISH_SUPERBOMB: _.constant(50000), // 鱼王
-    FISH_LK: _.constant(40000), // 李逵
+    FISH_BOSS: _.constant(40000), // 李逵
     FISH_3YUAN: _.constant(30000), // 大三元
     FISH_4XI: _.constant(30000), // 大四喜
     FREEZE: _.constant(10000), // 冰冻效果

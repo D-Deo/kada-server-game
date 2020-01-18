@@ -247,20 +247,20 @@ class Seat extends Super {
                         this.fishFee += fee;
                     }
 
-                    if (fish.getScore() >= 15 && _.random(0, 100) <= 25) {
-                        this.cannon = true;
-                        this.cannonMulrify = bulletMulriple;
+                    // if (fish.getScore() >= 15 && _.random(0, 100) <= 25) {
+                    //     this.cannon = true;
+                    //     this.cannonMulrify = bulletMulriple;
 
-                        if (this.cannonInterval != null) {
-                            this.cannonInterval.stop();
-                        }
+                    //     if (this.cannonInterval != null) {
+                    //         this.cannonInterval.stop();
+                    //     }
 
-                        this.cannonInterval = new intervalTimer(lkpycons.Interval.CANNON(), () => this.cannonTerminate());
-                        this.cannonInterval.start();
-                        this.room.emit(cons.RoomEvent.ROOM_ACTION(), cons.RoomAction.CHANGE_BULLET(), {
-                            seat: this.index, cannon: this.cannon, CannonMulrify: this.cannonMulrify, seconds: lkpycons.Interval.CANNON() / 1000
-                        });
-                    }
+                    //     this.cannonInterval = new intervalTimer(lkpycons.Interval.CANNON(), () => this.cannonTerminate());
+                    //     this.cannonInterval.start();
+                    //     this.room.emit(cons.RoomEvent.ROOM_ACTION(), cons.RoomAction.CHANGE_BULLET(), {
+                    //         seat: this.index, cannon: this.cannon, CannonMulrify: this.cannonMulrify, seconds: lkpycons.Interval.CANNON() / 1000
+                    //     });
+                    // }
 
                     if (fish.getKind() == lkpycons.FISH_KIND_22()) { // 定屏
                         stateMgr.freeze();

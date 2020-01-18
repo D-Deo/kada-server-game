@@ -12,9 +12,6 @@ class FreeState extends Super {
         super(room, lkpycons.RoomState.FREE(), lkpycons.RoomStateInterval.FREE());
     }
 
-    action(seat, action, next) {
-    }
-
     enter() {
         super.enter();
 
@@ -67,10 +64,10 @@ class FreeState extends Super {
         this.timerArray.push(this.createFishSuperBomb_handler);
         this.createFishSuperBomb_handler.start();
 
-        this.createFishLK_handler = new intervalTimer(lkpycons.Interval.FISH_LK(), null);
-        this.createFishLK_handler.callback = () => this.createFishLK(this.createFishLK_handler);
-        this.timerArray.push(this.createFishLK_handler);
-        this.createFishLK_handler.start();
+        this.createFishBoss_handler = new intervalTimer(lkpycons.Interval.FISH_BOSS(), null);
+        this.createFishBoss_handler.callback = () => this.createFishBoss(this.createFishBoss_handler);
+        this.timerArray.push(this.createFishBoss_handler);
+        this.createFishBoss_handler.start();
 
         this.createFish3YUAN_handler = new intervalTimer(lkpycons.Interval.FISH_3YUAN(), null);
         this.createFish3YUAN_handler.callback = () => this.createFish3Yuan(this.createFish3YUAN_handler);
@@ -120,7 +117,7 @@ class FreeState extends Super {
         handler.restart();
     }
 
-    createFishLK(handler) {
+    createFishBoss(handler) {
         this.addFish(1, lkpycons.FISH_KIND_21(), lkpycons.FISH_KIND_21());
         handler.restart();
     }

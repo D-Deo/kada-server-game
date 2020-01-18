@@ -319,6 +319,55 @@ Handler.prototype.wxLogin = function (msg, session, next) {
 };
 
 /**
+ * @api {request} connector.authorizationHandler.zappLogin ZAPP登录
+ * @apiGroup User
+ * @apiParam {string} game 游戏
+ * @apiParam {string} account 账号 - uid
+ * @apiParam {string} head 头像 - icon
+ * @apiParam {string} nick 昵称 - nickname
+ * @apiParam {number} sex 性别 - 男(0) 女(1)
+ */
+Handler.prototype.zappLogin = function (msg, session, next) {
+    if (!utils.isString(msg.openId, 1) ||
+        !utils.isString(msg.headUrl, 1) ||
+        !utils.isString(msg.nickName, 1)) {
+        return utils.nextError(next);
+    }
+
+    let ip = pomelo.app.get('sessionService').getClientAddressBySessionId(session.id).ip;
+    console.log('zappLogin', ip);
+
+    let attrs = {};
+    attrs.account = msg.openId || null;
+    attrs.head = msg.headUrl || null;
+    attrs.nick = msg.nickName || null;
+    attrs.sex = constants.Sex.MALE();
+    attrs.type = constants.User.AUTH();
+    attrs.device = msg.device || 1;
+    attrs.deviceid = msg.deviceid || null;
+    attrs.agentId = msg.agentId || 0;
+    attrs.ip = msg.ip || ip;
+    attrs.role = msg.role || constants.Role.PLAYER();
+    attrs.deviceinfo = msg.deviceinfo || null;
+
+    let userSession = UserSession.fromLoginBackendSession(session, 'lkpy');
+    rpc.login(userSession, attrs, msg.gps || null, (err, user) => {
+        if (err) {
+            return utils.nextError(next, err);
+        }
+        utils.nextOK(next, user);
+        // db.find('mail', { userId: user.id, readed: 0 }, (err, data) => {
+        //     if (err) {
+        //         utils.next(next, err);
+        //         return;
+        //     }
+        //     data ? user.redPoint = { mail: true } : user.redPoint = { mail: false };
+        //     err ? utils.next(next, err) : utils.nextOK(next, user);
+        // });
+    });
+};
+
+/**
  * @api {request} connector.authorizationHandler.reportProblem 问题反馈
  * @apiGroup User
  * @apiParam {number} type 问题类型
