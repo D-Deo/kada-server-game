@@ -35,10 +35,10 @@ class RobotScheduler_Push2 {
             return;
         }
 
-        let scoreMin = this.room.getAttr('scoreMin');
-        let scoreMax = this.room.getAttr('scoreMax') || (scoreMin * 10);
+        let baseScore = this.room.getAttr('baseScore');
+        let scoreMax = this.room.getAttr('scoreMax') || (baseScore * 10);
         _.each(_.range(2 - seats.length), () => {
-            let score = { 1: _.random(scoreMin, scoreMax) };
+            let score = { 1: _.random(baseScore * 10, scoreMax * 10) };
             this.room.getComp('robot').scheduleRequire(score, _.random(2000, 15000));
         });
     }
