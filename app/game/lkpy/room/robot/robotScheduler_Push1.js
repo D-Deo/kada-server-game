@@ -41,11 +41,11 @@ class RobotScheduler_Push1 {
     run() {
         this.stop();
 
-        let scoreMin = this.room.getAttr('scoreMin');
+        let baseScore = this.room.getAttr('baseScore');
         let seats = this.room.getComp('seat').getSittingSeats_Robot();
 
         _.each(_.range(1), () => {
-            let score = { 1: _.random(50 * scoreMin, 1000 * scoreMin) };
+            let score = { 1: _.random(50 * baseScore * 10, 1000 * baseScore * 10) };
             this.room.getComp('robot').scheduleRequire(score, _.random(1000, 3500));
         });
     }
