@@ -69,15 +69,15 @@ class FreeState extends Super {
         this.timerArray.push(this.createFishBoss_handler);
         this.createFishBoss_handler.start();
 
-        this.createFish3YUAN_handler = new intervalTimer(lkpycons.Interval.FISH_3YUAN(), null);
-        this.createFish3YUAN_handler.callback = () => this.createFish3Yuan(this.createFish3YUAN_handler);
-        this.timerArray.push(this.createFish3YUAN_handler);
-        this.createFish3YUAN_handler.start();
+        // this.createFish3YUAN_handler = new intervalTimer(lkpycons.Interval.FISH_3YUAN(), null);
+        // this.createFish3YUAN_handler.callback = () => this.createFish3Yuan(this.createFish3YUAN_handler);
+        // this.timerArray.push(this.createFish3YUAN_handler);
+        // this.createFish3YUAN_handler.start();
 
-        this.createFish4XI_handler = new intervalTimer(lkpycons.Interval.FISH_4XI(), null);
-        this.createFish4XI_handler.callback = () => this.createFish4Xi(this.createFish4XI_handler);
-        this.timerArray.push(this.createFish4XI_handler);
-        this.createFish4XI_handler.start();
+        // this.createFish4XI_handler = new intervalTimer(lkpycons.Interval.FISH_4XI(), null);
+        // this.createFish4XI_handler.callback = () => this.createFish4Xi(this.createFish4XI_handler);
+        // this.timerArray.push(this.createFish4XI_handler);
+        // this.createFish4XI_handler.start();
 
         this.judgeFishLife_handler = new intervalTimer(1000, null);
         this.judgeFishLife_handler.handle = () => this.judgeFishLife(this.judgeFishLife_handler);
