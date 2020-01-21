@@ -328,9 +328,7 @@ Handler.prototype.wxLogin = function (msg, session, next) {
  * @apiParam {number} sex 性别 - 男(0) 女(1)
  */
 Handler.prototype.zappLogin = function (msg, session, next) {
-    if (!utils.isString(msg.openId, 1) ||
-        !utils.isString(msg.headUrl, 1) ||
-        !utils.isString(msg.nickName, 1)) {
+    if (!utils.isString(msg.openId, 1)) {
         return utils.nextError(next);
     }
 
