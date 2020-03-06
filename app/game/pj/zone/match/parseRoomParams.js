@@ -13,7 +13,7 @@ module.exports = (area) => {
         createDeposit: null,
         enterDeposit: null,
         dismissable: false,
-        game: cons.Game.P9(),
+        game: cons.Game.PJ(),
         mode: cons.RoomMode.PRIVATE_SELF(),
         owner: null,
         roundCost: area.getParam('roundCost') || 0,
