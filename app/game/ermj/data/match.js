@@ -56,4 +56,22 @@ data.zone.areas = [{
             1000
         ]
     }
+}, {
+	id: 999,
+    idGenerator: { length: 10, min: 1000000 },
+    params: {
+        dismissable: true,
+        baseScore: 100,
+        scoreMin: 0,
+        scoreMax: 0,
+        bankerLimit: 0,
+        roundCost: 0,
+        bankerCount: 15,
+        betOptions: [
+            10,
+            50,
+            100,
+            1000
+        ]
+    }
 }];
