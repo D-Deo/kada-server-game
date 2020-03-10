@@ -23,7 +23,7 @@ const _ = require('underscore');
 let constants = module.exports = {};
 
 
-constants.GAME_FEE = _.constant(0.05);
+constants.GAME_FEE = _.constant(0.02);
 constants.GUILD_MAX = _.constant(10);
 constants.GUILD_AGENT_MAX = _.constant(20);
 constants.GUILD_MEMBER_MAX = _.constant(50);
