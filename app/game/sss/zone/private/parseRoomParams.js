@@ -30,8 +30,8 @@ module.exports = (session, params) => {
     if (!utils.isNumber(params.rounds, 1)) {
         return [cons.ResultCode.ERROR()];
     }
-	
-	// params.rounds = 2;
+
+    // params.rounds = 2;
 
     // 如果是不固定人数或者6人场以上，必须加两色（黑桃，红桃）
     if (params.capacity == 0 || params.capacity >= 6) {
@@ -42,10 +42,13 @@ module.exports = (session, params) => {
 
     // 不固定场的话，最小2人，最多6人
     if (params.capacity == 0) {
-        params.capacityMin = 2;
+        // params.capacityMin = 2;
         params.capacity = 6;
-        params.aa = 1;
+        // params.aa = 1;
     }
+
+    params.capacityMin = 2;
+    params.aa = 1;
 
     let scoreMin = Math.floor(params.rounds / 5);
     // 如果不是aa，房主一人承担

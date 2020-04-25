@@ -925,6 +925,11 @@ class StRule extends Rule {
     }
 
     check(cards) {
+        if (this.jokerCnt == 3) {
+            this.value = new Card(cons.Poker.CardSuit.JOKER(), cons.Poker.CardPoint.MAIN_JOKER(), 0);
+            return true;
+        }
+
         if (cards.length + this.jokerCnt == 3) { // 三张
             if (_.every(cards, c => c.getPoint() == cards[0].getPoint())) {
                 this.value = cards[0];

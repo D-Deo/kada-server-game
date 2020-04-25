@@ -33,7 +33,15 @@ class Hand {
                 this.flyCardNum = _.reduce(this.cards, (cnt, c) => {
                     return c.getSuit() == constants.Poker.CardSuit.HEART() && c.getPoint() == constants.Poker.CardPoint.ACE() ? cnt + 1 : cnt;
                 }, 0);
-            }
+            } else if (flyCard == 3) {
+                this.flyCardNum = _.reduce(this.cards, (cnt, c) => {
+                    return c.getSuit() == constants.Poker.CardSuit.CLUB() && c.getPoint() == constants.Poker.CardPoint.ACE() ? cnt + 1 : cnt;
+                }, 0);
+            } else if (flyCard == 4) {
+                this.flyCardNum = _.reduce(this.cards, (cnt, c) => {
+                    return c.getSuit() == constants.Poker.CardSuit.DIAMOND() && c.getPoint() == constants.Poker.CardPoint.ACE() ? cnt + 1 : cnt;
+                }, 0);
+            } 
         }
     }
 
