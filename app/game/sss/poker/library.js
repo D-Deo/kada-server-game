@@ -55,7 +55,8 @@ class Library {
         if (json.current > 0) {
             let initCards = { cards: [] };
             json.current = this.testIndex < (json.max || 1) ? this.testIndex : 1;
-
+            let d = fs.readFileSync('./app/game/sss/test/' + json.current + '.json');
+            console.log(json, d);
             try {
                 initCards = JSON.parse(fs.readFileSync('./app/game/sss/test/' + json.current + '.json'));
             } catch (e) {

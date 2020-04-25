@@ -955,7 +955,8 @@ class StRule extends Rule {
             }
             return this.value.getPoint();
         }
-        return super.getScore(position);
+        return 3;
+        // return super.getScore(position);
     }
 }
 

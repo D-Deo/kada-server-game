@@ -29,6 +29,9 @@ class Card extends Super {
     }
 
     getValue() {
+        if (this.point == 1) {
+            return this.suit * 100 + 13.5 * 10;
+        }
         return this.suit * 100 + this.point * 10; // + this.index;
     }
 
