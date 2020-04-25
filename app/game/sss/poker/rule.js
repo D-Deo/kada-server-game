@@ -587,7 +587,7 @@ class WzzRule extends Rule {
 class ThsRule extends Rule {
     constructor() {
         super(ssscons.SSS.Formation.THS);
-        this.faked = false;
+        // this.faked = false;
     }
 
     check(cards) {
@@ -596,45 +596,83 @@ class ThsRule extends Rule {
             return false;
         }
 
-        let rule = new SzRule();
-        rule.jokerCnt = this.jokerCnt;
-
-        if (rule.check(cards)) {
-            this.faked = rule.faked;
-            this.value = rule.value;
+        if (cards.length == 1) {
+            this.value = cards[0];
             return true;
         }
 
-        return false;
+        // 不都是单牌
+        if (cards.length != _.uniq(cards, c => c.getPoint()).length) {
+            return false;
+        }
+
+        let suit = _.first(cards).getSuit();
+
+        let n = cards.length + this.jokerCnt; // 检查的数量
+        if (_.last(cards).getPoint() == cons.Poker.CardPoint.ACE()) {          //手里有明A
+            if (_.first(cards).getPoint() > 14 - n) {
+                this.value = _.last(cards);
+            } else {
+                cards.unshift(cards.pop());
+                if (_.last(cards).getPoint() < n) {
+                    this.value = new Card(suit, cons.Poker.CardPoint.FIVE(), 0);
+                } else if (_.last(cards).getPoint() == n) {
+                    this.value = _.last(cards);
+                }
+            }
+        } else if (_.last(cards).getPoint() - _.first(cards).getPoint() < n) {      // 手里没有A
+            if (_.first(cards).getPoint() > 14 - n) {
+                this.value = new Card(suit, cons.Poker.CardPoint.ACE(), 0);
+            } else if (this.jokerCnt == 0) {
+                this.value = _.last(cards);
+            } else if (_.last(cards).getPoint() - _.first(cards).getPoint() == n - 1) {
+                this.value = _.last(cards);
+            } else {
+                this.value = new Card(suit, _.first(cards).getPoint() + n - 1, 0);
+            }
+        }
+
+        return !!this.value;
+
+        // let rule = new SzRule();
+        // rule.jokerCnt = this.jokerCnt;
+
+        // if (rule.check(cards)) {
+        //     this.faked = rule.faked;
+        //     this.value = rule.value;
+        //     return true;
+        // }
+
+        // return false;
     }
 
     compareSame(rule) {
-        let r = this.value.compare(rule.value);
+        let r = this.value.compare(rule.value, false);
         if (r != 0) {
             return r;
         }
+        return 0;
 
-        if (this.faked && rule.faked) {
-            return this.value.getSuit() - rule.value.getSuit();
-        }
-        else if (this.faked) {
-            return -1;
-        }
-        else if (rule.faked) {
-            return 1;
-        }
+        // if (this.faked && rule.faked) {
+        //     return this.value.getSuit() - rule.value.getSuit();
+        // }
+        // else if (this.faked) {
+        //     return -1;
+        // }
+        // else if (rule.faked) {
+        //     return 1;
+        // }
 
-        if (this.jokerCnt > 0 && rule.jokerCnt > 0) {
-            return this.value.getSuit() - rule.value.getSuit();
-        }
-        else if (this.jokerCnt > 0) {
-            return -1;
-        }
-        else if (rule.jokerCnt > 0) {
-            return 1;
-        }
-
-        return this.value.getSuit() - rule.value.getSuit();
+        // if (this.jokerCnt > 0 && rule.jokerCnt > 0) {
+        //     return this.value.getSuit() - rule.value.getSuit();
+        // }
+        // else if (this.jokerCnt > 0) {
+        //     return -1;
+        // }
+        // else if (rule.jokerCnt > 0) {
+        //     return 1;
+        // }
+        // return this.value.getSuit() - rule.value.getSuit();
     }
 
     getScore(position = 0) {
