@@ -988,18 +988,20 @@ class StRule extends Rule {
     }
 
     getScore(position = 0) {
-        if (position == 1 && this.touSan) {
-            // A最大
-            if (this.value.getPoint() == cons.Poker.CardPoint.ACE()) {
-                return 14;
+        if (position == 1) {
+            if (this.touSan) {
+                // A最大
+                if (this.value.getPoint() == cons.Poker.CardPoint.ACE()) {
+                    return 14;
+                }
+                if (this.value.getSuit() == cons.Poker.CardSuit.JOKER()) {
+                    return 20;
+                }
+                return this.value.getPoint();
             }
-            if (this.value.getSuit() == cons.Poker.CardSuit.JOKER()) {
-                return 20;
-            }
-            return this.value.getPoint();
+            return 3;
         }
-        return 3;
-        // return super.getScore(position);
+        return super.getScore(position);
     }
 }
 
