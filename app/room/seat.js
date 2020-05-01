@@ -10,6 +10,7 @@ class Seat {
         this.user = null;
         this.records = {};
         this.ready = false;
+        this.midway = false;
 
         this.clear();
     }
@@ -65,6 +66,8 @@ class Seat {
             return;
         }
 
+        this.setMidway(true);
+
         this.user.bindSession(session);
         this.user.sendAction(constants.RoomAction.PLAYER_ENTER_ROOM(), this.room.toJson(this));
 
@@ -84,6 +87,14 @@ class Seat {
 
     setIndex(index) {
         this.index = index;
+    }
+
+    getMidway() {
+        return this.midway;
+    }
+
+    setMidway(midway) {
+        this.midway = midway;
     }
 
     getUser() {
@@ -112,9 +123,10 @@ class Seat {
         }
 
         this.ready = ready;
-        this.room.emit(constants.RoomEvent.PLAYER_READY(), this);
-
         this.sendChannelAction(constants.RoomAction.PLAYER_READY(), { ready });
+        if (!this.getMidway()) {
+            this.room.emit(constants.RoomEvent.PLAYER_READY(), this);
+        }
     }
 
     isEmpty() {

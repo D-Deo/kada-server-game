@@ -64,6 +64,10 @@ class SeatManager extends Super {
             );
         });
     }
+
+    clearAllMidway() {
+        _.each(this.getSittingSeats(), (seat) => seat.setMidway(false));
+    }
 }
 
 
