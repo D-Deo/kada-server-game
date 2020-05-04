@@ -124,9 +124,7 @@ class Seat {
 
         this.ready = ready;
         this.sendChannelAction(constants.RoomAction.PLAYER_READY(), { ready });
-        if (!this.getMidway()) {
-            this.room.emit(constants.RoomEvent.PLAYER_READY(), this);
-        }
+        this.room.emit(constants.RoomEvent.PLAYER_READY(), this);
     }
 
     isEmpty() {

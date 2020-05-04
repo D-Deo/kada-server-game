@@ -27,9 +27,6 @@ class WaitState extends Super {
     }
 
     enter() {
-        let seatMgr = this.room.getComp('seat');
-        seatMgr.clearAllMidway();
-
         this.room.on(cons.RoomEvent.SEAT_ADD_PLAYER(), this.onSeatAddPlayer, this);
         this.room.on(cons.RoomEvent.SEAT_REMOVE_PLAYER(), this.onSeatRemovePlayer, this);
         // this.room.on(cons.RoomEvent.SEAT_HOST_PLAYER(), this.onSeatHostPlayer, this);
@@ -133,7 +130,7 @@ class WaitState extends Super {
         }
     }
 
-    onSeatPlayerReady() {
+    onSeatPlayerReady(seat) {
         let seatMgr = this.room.getComp('seat');
 
         if (this.room.isPlaying()) {
@@ -145,6 +142,10 @@ class WaitState extends Super {
             if (!seatMgr.isEnough()) {
                 return;
             }
+        }
+
+        if (seat.getMidway()) {
+            return;
         }
 
         if (this.timer.isRunning()) {
