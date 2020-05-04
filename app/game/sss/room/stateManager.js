@@ -64,7 +64,10 @@ class StateManager extends Super {
         this.library.wash();
 
         let jackpot = 0;
-        _.each(this.room.getComp('seat').getReadySeats(), (seat) => {
+        let seatMgr = this.room.getComp('seat');
+
+        seatMgr.clearAllMidway();
+        _.each(seatMgr.getReadySeats(), (seat) => {
             seat.onRoundBegin(jackpot);
         });
 
