@@ -138,13 +138,13 @@ class WaitState extends Super {
                 this.end();
                 return;
             }
-        } else {
-            if (!seatMgr.isEnough()) {
+
+            if (seat.getMidway()) {
                 return;
             }
         }
 
-        if (seat.getMidway()) {
+        if (!seatMgr.isEnough()) {
             return;
         }
 
