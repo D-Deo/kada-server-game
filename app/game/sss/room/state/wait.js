@@ -144,8 +144,10 @@ class WaitState extends Super {
             }
         }
 
-        if (!seatMgr.isEnough()) {
-            return;
+        if (!this.room.isPlaying()) {
+            if (!seatMgr.isEnough()) {
+                return;
+            }
         }
 
         if (this.timer.isRunning()) {
