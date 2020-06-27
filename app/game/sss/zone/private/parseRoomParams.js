@@ -50,7 +50,7 @@ module.exports = (session, params) => {
     params.capacityMin = 2;
     params.aa = 1;
 
-    let scoreMin = Math.floor(params.rounds / 5);
+    let scoreMin = Math.floor(params.rounds);
     // 如果不是aa，房主一人承担
     if (params.aa != 1) {
         scoreMin *= params.capacity
@@ -69,8 +69,8 @@ module.exports = (session, params) => {
         type: cons.RoomType.PRIVATE(),
         score: cons.Item.DIAMOND(),
         scoreMin: scoreMin,
-        scoreBack: 10,
-        scoreCut: 2,
+        scoreBack: 50,
+        scoreCut: 20,
         capacity: params.capacity,                      //人数
         capacityMin: params.capacityMin,                //最小支持人数
         rounds: params.rounds,                          //局数

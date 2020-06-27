@@ -314,10 +314,10 @@ class Handler {
         }
 
         let orderId = utility.md5(new Date().getTime() + '' + _.random(1000, 9999) + '' + user.getAttr('id'));
-        const fees = [800, 2400, 4000, 10000, 20000, 40000, 60000, 80000];
-        const gem = [10, 30, 50, 125, 280, 620, 1000, 1460];
+        const fees = [3000, 6000, 10000, 20000];
+        const gem = [300, 600, 1000, 2000];
 
-        wx.unifiedorder(orderId, fees[msg.index], '猪猪在线--游戏充值' + msg.index, (code, ret) => {
+        wx.unifiedorder(orderId, fees[msg.index], '游戏充值' + msg.index, (code, ret) => {
             if (code) {
                 return utils.next(next, code);
             }
