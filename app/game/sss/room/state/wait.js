@@ -138,14 +138,16 @@ class WaitState extends Super {
                 this.end();
                 return;
             }
-        } else {
-            if (!seatMgr.isEnough()) {
+
+            if (seat.getMidway()) {
                 return;
             }
         }
 
-        if (seat.getMidway()) {
-            return;
+        if (!this.room.isPlaying()) {
+            if (!seatMgr.isEnough()) {
+                return;
+            }
         }
 
         if (this.timer.isRunning()) {
