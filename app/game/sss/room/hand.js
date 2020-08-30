@@ -61,10 +61,12 @@ class Hand {
     getLibraryCards(jackpot) {
         let stateMgr = this.seat.room.getComp('state');
         if (this.seat.isWhite()) {
-            return stateMgr.getLibrary().getCardsWhite();
+            let cards = stateMgr.getLibrary().getCardsWhite();
+            if (cards != null) return cards;
         }
         if (this.seat.isBlack()) {
-            return stateMgr.getLibrary().getCardsBlack();
+            let cards = stateMgr.getLibrary().getCardsBlack();
+            if (cards != null) return cards;
         }
         return stateMgr.getLibrary().getCardsByIndex(0); // .getCardsRandom();
     }

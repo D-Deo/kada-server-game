@@ -233,20 +233,32 @@ class Library {
     }
 
     getCardsWhite() {
-        return this.whiteHand.cards;
+        if (this.whiteHand) {
+            let cards = this.whiteHand.cards;
+            this.whiteHand = null;
+            return cards;
+        }
+        return null;
+        // return this.whiteHand.cards;
     }
 
     getCardsBlack() {
-        return this.blackHand.cards;
+        if (this.blackHand) {
+            let cards = this.blackHand.cards;
+            this.blackHand = null;
+            return cards;
+        }
+        return null;
+        // return this.blackHand.cards;
     }
 
     getCardsByIndex(index) {
         let hand = this.seatHands.splice(index, 1)[0];
         if (!hand) {
-            hand = this.blackHand;
+            hand = this.blackHand || [];
         }
         if (!hand) {
-            hand = this.whiteHand;
+            hand = this.whiteHand || [];
         }
         if (!hand) {
             logger.error('no hand', index);
