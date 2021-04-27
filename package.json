@@ -23,7 +23,7 @@
     "morgan": "^1.8.2",
     "mysql2": "^1.5.3",
     "pomelo": "^2.2.5",
-    "redis": "^2.8.0",
+    "redis": "^3.1.1",
     "request": "^2.81.0",
     "sequelize": "^4.37.7",
     "serve-favicon": "^2.4.3",
