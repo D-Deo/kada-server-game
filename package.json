@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "Base64": "^1.0.1",
-    "async": "^2.0.1",
+    "async": "^2.6.4",
     "body-parser": "^1.17.2",
     "cookie-parser": "^1.4.3",
     "cron-parser": "^2.5.0",
